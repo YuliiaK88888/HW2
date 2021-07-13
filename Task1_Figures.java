@@ -86,20 +86,29 @@ public class Task1_Figures {
         }
     }
 
-//    public static void rhombus() {
-//        int x = 10;
-//        for (int i = 0; i < x/2; i++) {
-//            for (int j = 0; j < x; j++) {
-//                if (j==(x-i)/2-i ||j==(x-i)/2+i ) {
-//                    System.out.print("* ");
-//                } else {
-//                    System.out.print("  ");
-//                }
-//            }
-//            System.out.println("");
-//        }
-//    }
+    public static void rhombus() {
+        int x = 10;
+        int center = x / 2;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+                if (i < center) {
+                    if (j >= center - i && j <= center + i) {
+                        System.out.print("* ");
+                    } else
+                        System.out.print(" ");
+                } else {
+                    if (j >= center + i - x + 1 && j <= center - i + x - 1) {
+                        System.out.print("* ");
+                    } else {
+                        System.out.print(" ");
+                    }
 
+                }
+            }
+            System.out.println("");
+        }
+    }
+    
 
     public static void triangle6() {
         int x = 10;
